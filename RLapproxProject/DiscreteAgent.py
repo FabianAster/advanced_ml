@@ -42,7 +42,9 @@ class Agent:
                 action = action_space.sample()
                 return action, self.q[action](torch.tensor(observation))
             qa = [qa(torch.tensor(observation)) for qa in self.q]
+            qa = torch.nn.functional.softmax(torch.tensor(qa), dim=0)
             qamax = np.argmax([q.detach().numpy() for q in qa])
+            # print(f"action values after max: {[q.item() for q in qa]} -> {qamax}")
             return qamax, qa[qamax]
 
     # Perform a gradient-ascent parameter update.

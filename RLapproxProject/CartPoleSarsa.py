@@ -12,16 +12,14 @@ class Q(nn.Module):
     def __init__(self):
         super(Q, self).__init__()
         # BEGIN YOUR CODE HERE
-        self.nn = nn.Linear(1, 4)
+        self.nn = nn.Linear(4, 4)
         self.nn1 = nn.Linear(4, 10)
         self.nn2 = nn.Linear(10, 1)
-        self.softmax = nn.Softmax(0)
         # END YOUR CODE HERE
 
     def forward(self, x):
         x = self.nn(x.flatten())
         x = self.nn1(x)
-        x = self.softmax(x)
         x = self.nn2(x)
         return x
 

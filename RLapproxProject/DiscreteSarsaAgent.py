@@ -17,9 +17,10 @@ class Agent(Discrete.Agent):
     #   T, the length of this episode in time steps, and
     #   G, the (discounted) return earned during this episode.
     def trainEpisode(self, env):
-        # BEGIN YOUR CODE HEREobs_space
+        # BEGIN YOUR CODE HERE
         state = env.reset()[0]
-        action = env.action_space.sample()
+        action, _ = self.chooseAction(state, env.action_space)
+
         q_value = 0
         G = 0
         T = 0
@@ -28,16 +29,12 @@ class Agent(Discrete.Agent):
         while not done:
             next_state, reward, done, _, _ = env.step(action)
 
-            next_action, next_q_value = self.chooseAction(
-                next_state[0], env.action_space
-            )
+            next_action, next_q_value = self.chooseAction(next_state, env.action_space)
 
-            q_value = self.q[action](torch.tensor(state[0]))
-
+            q_value = self.q[action](torch.tensor(state))
             G += reward
 
-            # SARSA update
-            target = reward + (0 if done else self.gamma * next_q_value)
+            target = reward + self.gamma * next_q_value
 
             self.update(action, target, q_value)
 
