@@ -37,6 +37,8 @@ class Agent:
     # Feel free to change or replace this method, e.g. by a softmax policy.
     def chooseAction(self, observation, action_space):
         # returns the (integer) action and its estimated value
+        # print("observation", observation)
+        # print("aciton space", action_space)
         with torch.no_grad():
             if random() < self.epsilon:
                 action = action_space.sample()

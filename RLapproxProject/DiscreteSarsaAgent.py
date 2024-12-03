@@ -18,20 +18,25 @@ class Agent(Discrete.Agent):
     #   G, the (discounted) return earned during this episode.
     def trainEpisode(self, env):
         # BEGIN YOUR CODE HERE
-        state = env.reset()[0]
-        action, _ = self.chooseAction(state, env.action_space)
+        state, _ = env.reset()
+        action = env.action_space.sample()
 
         q_value = 0
         G = 0
         T = 0
         done = False
 
-        while not done:
+        while not done and T < 100:
+            # # print("while loop")
             next_state, reward, done, _, _ = env.step(action)
 
-            next_action, next_q_value = self.chooseAction(next_state, env.action_space)
+            # print("state", next_state)
+            next_action, _ = self.chooseAction(next_state, env.action_space)
 
+            # print("state", state)
+            # print("action,", action)
             q_value = self.q[action](torch.tensor(state))
+            next_q_value = self.q[next_action](torch.tensor(next_state))
             G += reward
 
             target = reward + self.gamma * next_q_value
