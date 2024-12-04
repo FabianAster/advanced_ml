@@ -41,6 +41,12 @@ class Agent():
             print(f"{ha=} {actions=} {choice=}")
             assert False
 
+    def softmax(self, h_values):
+        exp_values = torch.exp(h_values)
+        sum_exp_values = torch.sum(exp_values)
+        return exp_values / sum_exp_values
+        
+
     # Perform a gradient-ascent REINFORCE parameter update.
     # t is the time step of the current episode.
     # action is A_t, observation is S_t, and target is G_t.
@@ -48,6 +54,23 @@ class Agent():
     # either here or in trainEpisode() below.
     def update(self, t, action, observation, target):
         # BEGIN YOUR CODE HERE
+        h_values = []
+        for action in [0, 1]:
+            h_values.append(self.h[action](torch.tensor(observation)))
+
+        # Convert h_values to a tensor
+        h_values = torch.stack(h_values)
+
+        # Compute the softmax probabilities
+        pi = self.softmax(h_values)
+
+        # Compute the policy loss
+        policy_loss = -self.gamma**t * target * torch.log(pi[action])
+
+        # Perform a gradient ascent step
+        self.optim.zero_grad()
+        policy_loss.backward()
+        self.optim.step()
 
         # END YOUR CODE HERE
 
@@ -71,6 +94,23 @@ class Agent():
     # This code will be very similar to DiscreteMonteCarloAgent.trainEpisode().
     def trainEpisode(self, env):
         # BEGIN YOUR CODE HERE
+        state, _ = env.reset()
+        episode = []
+        done = False
+        T = 0
+
+        while not done and T < 100:
+            action = env.action_space.sample()
+            next_state, reward, done, _, _ = env.step(action)
+            episode.append((state, action, reward))
+            state = next_state
+            T += 1
+
+        # Compute returns and update policy
+        G = 0
+        for t, (state, action, reward) in enumerate(reversed(episode)):
+            G = reward + self.gamma * G  # Accumulate return
+            self.update(t, action, state, G)  # Call the update method
 
         # END YOUR CODE HERE
         return T, G

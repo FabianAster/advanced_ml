@@ -4,21 +4,28 @@ from torch import nn
 import DiscreteMonteCarloAgent as rl
 
 
-env = gym.make('CartPole-v1', max_episode_steps=100)
+env = gym.make("CartPole-v1", max_episode_steps=100)
 dimObs = env.observation_space.shape[0]
+
 
 class Q(nn.Module):
     def __init__(self):
         super(Q, self).__init__()
         # BEGIN YOUR CODE HERE
-
+        self.nn = nn.Linear(dimObs, 32)
+        self.relu1 = nn.ReLU()
+        self.nn2 = nn.Linear(32, 1)
         # END YOUR CODE HERE
-        
+
     def forward(self, x):
-        return self.nn(x)
+        x = self.nn(x)
+        x = self.relu1(x)
+        x = self.nn2(x)
+        return x
 
 
 import sys
+
 run = int(sys.argv[1]) if len(sys.argv) == 2 else None
 
 # Play with gamma, alpha, and perhaps other pararameters:

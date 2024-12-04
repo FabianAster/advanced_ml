@@ -16,10 +16,32 @@ class Agent(Reinforce.Agent):
         super(Agent, self).__init__(H, nActions, **kwargs)
         self.v = V()
         self.optimv = torch.optim.SGD(self.v.parameters(), alphaw)
+        self.alphaw = alphaw
 
     # This method does almost the same as its base-class counterpart, and
     # also computes the gradient-based parameter update of the v(s) network.
     def update(self, t, action, observation, target):
         # BEGIN YOUR CODE HERE
+        h_values = []
+        for action in [0, 1]:
+            h_values.append(self.h[action](torch.tensor(observation)))
+
+        h_values = torch.stack(h_values)
+        pi = self.softmax(h_values)
+
+        policy_loss = -self.gamma**t * (target - self.v(observation).detach()) * torch.log(pi[action])
+
+
+        self.optim.zero_grad()
+        policy_loss.backward()
+        self.optim.step()
+
+
+        loss_v = - self.alphaw * self.v(observation)
+
+
+        self.optimv.zero_grad()
+        loss_v.backward()
+        self.optimv.step()
 
         # END YOUR CODE HERE

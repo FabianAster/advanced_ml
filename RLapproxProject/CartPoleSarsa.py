@@ -12,9 +12,9 @@ class Q(nn.Module):
     def __init__(self):
         super(Q, self).__init__()
         # BEGIN YOUR CODE HERE
-        self.nn = nn.Linear(4, 128)
-        self.relu1 = nn.ELU()
-        self.nn2 = nn.Linear(128, 1)
+        self.nn = nn.Linear(4, 32)
+        self.relu1 = nn.ReLU()
+        self.nn2 = nn.Linear(32, 1)
         # END YOUR CODE HERE
 
     def forward(self, x):
