@@ -11,9 +11,10 @@ import numpy as np
 from random import random
 
 
-class Agent():
-    def __init__(self, H, nActions, alpha=0.000001, gamma=0.9,
-                 nEpisodes=25000, jointNN=False):
+class Agent:
+    def __init__(
+        self, H, nActions, alpha=0.000001, gamma=0.9, nEpisodes=25000, jointNN=False
+    ):
         self.gamma = gamma
         self.jointNN = jointNN
         if jointNN:
@@ -22,16 +23,19 @@ class Agent():
         else:
             self.h = [H() for _ in range(nActions)]
             # One common optimizer for all nActions' h functions:
-            self.optim = torch.optim.SGD([p for ha in self.h
-                                          for p in ha.parameters()], alpha)
+            self.optim = torch.optim.SGD(
+                [p for ha in self.h for p in ha.parameters()], alpha
+            )
         self.episodes = np.zeros((nEpisodes, 2))
 
     # Implements a policy parametrized as soft-max in action preferences.
     def chooseAction(self, obs):
         with torch.no_grad():
-            ha = self.h(torch.tensor(obs)).exp().numpy() if self.jointNN \
-                else np.array([ha(torch.tensor(obs)).exp().item()
-                               for ha in self.h])
+            ha = (
+                self.h(torch.tensor(obs)).exp().numpy()
+                if self.jointNN
+                else np.array([ha(torch.tensor(obs)).exp().item() for ha in self.h])
+            )
             actions = ha.cumsum()
             choice = random() * actions[-1]
             for action in range(len(actions)):
@@ -45,7 +49,6 @@ class Agent():
         exp_values = torch.exp(h_values)
         sum_exp_values = torch.sum(exp_values)
         return exp_values / sum_exp_values
-        
 
     # Perform a gradient-ascent REINFORCE parameter update.
     # t is the time step of the current episode.
@@ -55,8 +58,10 @@ class Agent():
     def update(self, t, action, observation, target):
         # BEGIN YOUR CODE HERE
         h_values = []
-        for action in [0, 1]:
-            h_values.append(self.h[action](torch.tensor(observation)))
+        for allaction in [0, 1]:
+            h_values.append(self.h[allaction](torch.tensor(observation)))
+
+        # printt("h_values: ", h_values)
 
         # Convert h_values to a tensor
         h_values = torch.stack(h_values)
@@ -65,7 +70,10 @@ class Agent():
         pi = self.softmax(h_values)
 
         # Compute the policy loss
-        policy_loss = -self.gamma**t * target * torch.log(pi[action])
+        policy_loss = -(self.gamma**t) * target * torch.log(pi[action])
+        # printt("pi: ", pi)
+        # printt("policy_loss: ", policy_loss)
+        # printt("target: ", target)
 
         # Perform a gradient ascent step
         self.optim.zero_grad()
@@ -78,12 +86,14 @@ class Agent():
     # The method for training one episode, trainEpisode(env), is defined below.
     def train(self, env):
         for episode in range(len(self.episodes)):
-            self.episodes[episode,:] = self.trainEpisode(env)
-            print(f"{episode=:5d}, t={self.episodes[episode,0]:3.0f}: G={self.episodes[episode,1]:6.1f}")
+            self.episodes[episode, :] = self.trainEpisode(env)
+            print(
+                f"{episode=:5d}, t={self.episodes[episode,0]:3.0f}: G={self.episodes[episode,1]:6.1f}"
+            )
 
     # Call this to save data collected during training for further analysis.
     def save(self, file):
-        np.save(file, self.episodes)        
+        np.save(file, self.episodes)
 
     # This method trains the agent for one episode on the given
     # gymnasium environment, and is called by train() above.
@@ -100,17 +110,17 @@ class Agent():
         T = 0
 
         while not done and T < 100:
-            action = env.action_space.sample()
+            action = self.chooseAction(state)
             next_state, reward, done, _, _ = env.step(action)
-            episode.append((state, action, reward))
+            episode.append((T, state, action, reward))
             state = next_state
             T += 1
 
         # Compute returns and update policy
         G = 0
-        for t, (state, action, reward) in enumerate(reversed(episode)):
+        for t, state, action, reward in reversed(episode):
             G = reward + self.gamma * G  # Accumulate return
-            # print("t", t)
+            # print("t: ", t)
             # print("state: ", state)
             # print("action: ", action)
             # print("reward: ", reward)

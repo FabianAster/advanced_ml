@@ -23,22 +23,23 @@ class Agent(Reinforce.Agent):
     def update(self, t, action, observation, target):
         # BEGIN YOUR CODE HERE
         h_values = []
-        for action in [0, 1]:
-            h_values.append(self.h[action](torch.tensor(observation)))
+        for all_action in [0, 1]:
+            h_values.append(self.h[all_action](torch.tensor(observation)))
 
         h_values = torch.stack(h_values)
         pi = self.softmax(h_values)
 
-        policy_loss = -self.gamma**t * (target - self.v(torch.tensor(observation)).detach()) * torch.log(pi[action])
-
+        policy_loss = (
+            -(self.gamma**t)
+            * (target - self.v(torch.tensor(observation)).detach())
+            * torch.log(pi[action])
+        )
 
         self.optim.zero_grad()
         policy_loss.backward()
         self.optim.step()
 
-
-        loss_v = - self.alphaw * self.v(torch.tensor(observation))
-
+        loss_v = -self.alphaw * self.v(torch.tensor(observation))
 
         self.optimv.zero_grad()
         loss_v.backward()
