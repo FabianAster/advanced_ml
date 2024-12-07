@@ -12,7 +12,7 @@ from random import random
 
 
 class Agent():
-    def __init__(self, H, nActions, alpha=0.000001, gamma=1,
+    def __init__(self, H, nActions, alpha=0.000001, gamma=0.9,
                  nEpisodes=25000, jointNN=False):
         self.gamma = gamma
         self.jointNN = jointNN
@@ -110,6 +110,10 @@ class Agent():
         G = 0
         for t, (state, action, reward) in enumerate(reversed(episode)):
             G = reward + self.gamma * G  # Accumulate return
+            # print("t", t)
+            # print("state: ", state)
+            # print("action: ", action)
+            # print("reward: ", reward)
             self.update(t, action, state, G)  # Call the update method
 
         # END YOUR CODE HERE

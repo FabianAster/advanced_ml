@@ -11,22 +11,32 @@ class H(nn.Module):
     def __init__(self):
         super(H, self).__init__()
         # BEGIN YOUR CODE HERE
-
+        self.nn = nn.Linear(dimObs, 32)
+        self.relu1 = nn.ReLU()
+        self.nn2 = nn.Linear(32, 1)
         # END YOUR CODE HERE
-        
+
     def forward(self, x):
-        return self.nn(x)
+        x = self.nn(x)
+        x = self.relu1(x)
+        x = self.nn2(x)
+        return x
 
 
 class V(nn.Module):
     def __init__(self):
         super(V, self).__init__()
         # BEGIN YOUR CODE HERE
-
+        self.nn = nn.Linear(dimObs, 32)
+        self.relu1 = nn.ReLU()
+        self.nn2 = nn.Linear(32, 1)
         # END YOUR CODE HERE
-        
+
     def forward(self, x):
-        return self.nn(x)
+        x = self.nn(x)
+        x = self.relu1(x)
+        x = self.nn2(x)
+        return x
 
 
 import sys

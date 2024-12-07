@@ -27,14 +27,10 @@ class Agent(Discrete.Agent):
         done = False
 
         while not done and T < 100:
-            # # print("while loop")
             next_state, reward, done, _, _ = env.step(action)
 
-            # print("state", next_state)
             next_action, _ = self.chooseAction(next_state, env.action_space)
 
-            # print("state", state)
-            # print("action,", action)
             q_value = self.q[action](torch.tensor(state))
             next_q_value = self.q[next_action](torch.tensor(next_state))
             G += reward

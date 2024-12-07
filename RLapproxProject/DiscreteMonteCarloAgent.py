@@ -24,15 +24,15 @@ class Agent(Discrete.Agent):
         T = 0
 
         while not done and T < 100:
-            action = env.action_space.sample()
+            action, _ = self.chooseAction(state, env.action_space)
             next_state, reward, done, _, _ = env.step(action)
-            episode.append((state, action, reward))
+            episode.append((state, action, reward * self.gamma))
             state = next_state
             T += 1
 
         G = 0
         for state, action, reward in reversed(episode):
-            G = reward + G  # Accumulate return
+            G = reward + G
             q_value = self.q[action](torch.tensor(state))
             target = G
             self.update(action, target, q_value)
