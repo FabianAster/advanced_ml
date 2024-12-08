@@ -44,7 +44,6 @@ class Agent:
                 action = action_space.sample()
                 return action, self.q[action](torch.tensor(observation))
             qa = [qa(torch.tensor(observation)) for qa in self.q]
-            qa = torch.nn.functional.softmax(torch.tensor(qa), dim=0)
             qamax = np.argmax([q.detach().numpy() for q in qa])
             # print(f"action values after max: {[q.item() for q in qa]} -> {qamax}")
             return qamax, qa[qamax]
@@ -72,6 +71,8 @@ class Agent:
             print(
                 f"{episode=:5d}, t={self.episodes[episode,0]:3.0f}: G={self.episodes[episode,1]:6.1f} {self.epsilon=}"
             )
+            if episode % 100 == 0 and episode > 5000:
+                self.annealeps()
 
     # Call this to save data collected during training for further analysis.
     def save(self, file):
