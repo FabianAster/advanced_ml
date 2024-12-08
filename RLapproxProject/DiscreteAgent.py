@@ -72,6 +72,8 @@ class Agent:
             print(
                 f"{episode=:5d}, t={self.episodes[episode,0]:3.0f}: G={self.episodes[episode,1]:6.1f} {self.epsilon=}"
             )
+            if episode % 1000 == 0:
+                self.annealeps()
 
     # Call this to save data collected during training for further analysis.
     def save(self, file):

@@ -108,10 +108,11 @@ class Agent:
         episode = []
         done = False
         T = 0
+        truncated = False
 
-        while not done and T < 100:
+        while not done and not truncated:
             action = self.chooseAction(state)
-            next_state, reward, done, _, _ = env.step(action)
+            next_state, reward, done, truncated, _ = env.step(action)
             episode.append((T, state, action, reward))
             state = next_state
             T += 1

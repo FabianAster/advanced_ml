@@ -25,9 +25,10 @@ class Agent(Discrete.Agent):
         G = 0
         T = 0
         done = False
+        truncated = False
 
-        while not done and T < 100:
-            next_state, reward, done, _, _ = env.step(action)
+        while not done and not truncated:
+            next_state, reward, done, truncated, _ = env.step(action)
 
             next_action, _ = self.chooseAction(next_state, env.action_space)
 

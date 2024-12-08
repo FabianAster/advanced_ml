@@ -21,11 +21,12 @@ class Agent(Discrete.Agent):
         state, _ = env.reset()
         episode = []
         done = False
+        truncated = False
         T = 0
 
-        while not done and T < 100:
+        while not done and not truncated:
             action, _ = self.chooseAction(state, env.action_space)
-            next_state, reward, done, _, _ = env.step(action)
+            next_state, reward, done, truncated, _ = env.step(action)
             episode.append((state, action, reward * self.gamma))
             state = next_state
             T += 1
