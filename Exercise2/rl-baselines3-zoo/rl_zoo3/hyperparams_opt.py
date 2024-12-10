@@ -17,7 +17,7 @@ def sample_ppo_params(trial: optuna.Trial, n_actions: int, n_envs: int, addition
     """
     batch_size = trial.suggest_categorical("batch_size", [8, 16, 32, 64, 128, 256, 512])
     n_steps = trial.suggest_categorical("n_steps", [8, 16, 32, 64, 128, 256, 512, 1024, 2048])
-    gamma = trial.suggest_categorical("gamma", [0.9, 0.95, 0.98, 0.99, 0.995, 0.999, 0.9999])
+    gamma = trial.suggest_categorical("gamma", [0.98])
     learning_rate = trial.suggest_float("learning_rate", 1e-5, 1, log=True)
     ent_coef = trial.suggest_float("ent_coef", 0.00000001, 0.1, log=True)
     clip_range = trial.suggest_categorical("clip_range", [0.1, 0.2, 0.3, 0.4])
@@ -107,7 +107,7 @@ def sample_trpo_params(trial: optuna.Trial, n_actions: int, n_envs: int, additio
     """
     batch_size = trial.suggest_categorical("batch_size", [8, 16, 32, 64, 128, 256, 512])
     n_steps = trial.suggest_categorical("n_steps", [8, 16, 32, 64, 128, 256, 512, 1024, 2048])
-    gamma = trial.suggest_categorical("gamma", [0.9, 0.95, 0.98, 0.99, 0.995, 0.999, 0.9999])
+    gamma = trial.suggest_categorical("gamma", [0.98])
     learning_rate = trial.suggest_float("learning_rate", 1e-5, 1, log=True)
     # line_search_shrinking_factor = trial.suggest_categorical("line_search_shrinking_factor", [0.6, 0.7, 0.8, 0.9])
     n_critic_updates = trial.suggest_categorical("n_critic_updates", [5, 10, 20, 25, 30])
@@ -172,7 +172,7 @@ def sample_a2c_params(trial: optuna.Trial, n_actions: int, n_envs: int, addition
     :param trial:
     :return:
     """
-    gamma = trial.suggest_categorical("gamma", [0.9, 0.95, 0.98, 0.99, 0.995, 0.999, 0.9999])
+    gamma = trial.suggest_categorical("gamma", [0.98])
     normalize_advantage = trial.suggest_categorical("normalize_advantage", [False, True])
     max_grad_norm = trial.suggest_categorical("max_grad_norm", [0.3, 0.5, 0.6, 0.7, 0.8, 0.9, 1, 2, 5])
     # Toggle PyTorch RMS Prop (different from TF one, cf doc)
@@ -236,7 +236,7 @@ def sample_sac_params(trial: optuna.Trial, n_actions: int, n_envs: int, addition
     :param trial:
     :return:
     """
-    gamma = trial.suggest_categorical("gamma", [0.9, 0.95, 0.98, 0.99, 0.995, 0.999, 0.9999])
+    gamma = trial.suggest_categorical("gamma", [0.98])
     learning_rate = trial.suggest_float("learning_rate", 1e-5, 1, log=True)
     batch_size = trial.suggest_categorical("batch_size", [16, 32, 64, 128, 256, 512, 1024, 2048])
     buffer_size = trial.suggest_categorical("buffer_size", [int(1e4), int(1e5), int(1e6)])
@@ -297,7 +297,7 @@ def sample_td3_params(trial: optuna.Trial, n_actions: int, n_envs: int, addition
     :param trial:
     :return:
     """
-    gamma = trial.suggest_categorical("gamma", [0.9, 0.95, 0.98, 0.99, 0.995, 0.999, 0.9999])
+    gamma = trial.suggest_categorical("gamma", [0.98])
     learning_rate = trial.suggest_float("learning_rate", 1e-5, 1, log=True)
     batch_size = trial.suggest_categorical("batch_size", [16, 32, 64, 100, 128, 256, 512, 1024, 2048])
     buffer_size = trial.suggest_categorical("buffer_size", [int(1e4), int(1e5), int(1e6)])
@@ -353,7 +353,7 @@ def sample_ddpg_params(trial: optuna.Trial, n_actions: int, n_envs: int, additio
     :param trial:
     :return:
     """
-    gamma = trial.suggest_categorical("gamma", [0.9, 0.95, 0.98, 0.99, 0.995, 0.999, 0.9999])
+    gamma = trial.suggest_categorical("gamma", [0.98])
     learning_rate = trial.suggest_float("learning_rate", 1e-5, 1, log=True)
     batch_size = trial.suggest_categorical("batch_size", [16, 32, 64, 100, 128, 256, 512, 1024, 2048])
     buffer_size = trial.suggest_categorical("buffer_size", [int(1e4), int(1e5), int(1e6)])
@@ -407,7 +407,7 @@ def sample_dqn_params(trial: optuna.Trial, n_actions: int, n_envs: int, addition
     :param trial:
     :return:
     """
-    gamma = trial.suggest_categorical("gamma", [0.9, 0.95, 0.98, 0.99, 0.995, 0.999, 0.9999])
+    gamma = trial.suggest_categorical("gamma", [0.98])
     learning_rate = trial.suggest_float("learning_rate", 1e-5, 1, log=True)
     batch_size = trial.suggest_categorical("batch_size", [16, 32, 64, 100, 128, 256, 512])
     buffer_size = trial.suggest_categorical("buffer_size", [int(1e4), int(5e4), int(1e5), int(1e6)])

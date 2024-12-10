@@ -364,7 +364,7 @@ class ExperimentManager:
 
             # Use the same discount factor as for the algorithm
             if "gamma" in hyperparams:
-                self.normalize_kwargs["gamma"] = hyperparams["gamma"]
+                self.normalize_kwargs["gamma"] = 0.98
 
             del hyperparams["normalize"]
         return hyperparams
