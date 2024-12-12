@@ -1,0 +1,944 @@
+runAll.sh: line 1: python: command not found
+runAll.sh: line 2: python: command not found
+runAll.sh: line 3: python: command not found
+/root/github/advanced_ml/Exercise2/venv/lib/python3.12/site-packages/optuna/_experimental.py:31: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+[I 2024-12-10 18:32:43,391] A new study created in memory with name: no-name-62982ea0-b7cc-408a-8c07-8332ab6f45a7
+[I 2024-12-10 18:36:05,154] Trial 0 finished with value: -149.0663242 and parameters: {'gamma': 0.98, 'learning_rate': 0.009378611290199644, 'batch_size': 100, 'buffer_size': 10000, 'tau': 0.02, 'train_freq': 8, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.8430769594383828, 'net_arch': 'medium'}. Best is trial 0 with value: -149.0663242.
+[I 2024-12-10 18:37:36,936] Trial 1 finished with value: -991.7530663999999 and parameters: {'gamma': 0.98, 'learning_rate': 0.04089872542945198, 'batch_size': 100, 'buffer_size': 1000000, 'tau': 0.001, 'train_freq': 16, 'noise_type': 'normal', 'noise_std': 0.6275057552436965, 'net_arch': 'small'}. Best is trial 0 with value: -149.0663242.
+[I 2024-12-10 18:40:13,955] Trial 2 finished with value: -1048.5498422 and parameters: {'gamma': 0.98, 'learning_rate': 1.5918743300105872e-05, 'batch_size': 128, 'buffer_size': 1000000, 'tau': 0.005, 'train_freq': 1, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.9326833999083245, 'net_arch': 'medium'}. Best is trial 0 with value: -149.0663242.
+[I 2024-12-10 18:42:58,225] Trial 3 finished with value: -147.41730760000002 and parameters: {'gamma': 0.98, 'learning_rate': 0.0011308433411968254, 'batch_size': 32, 'buffer_size': 1000000, 'tau': 0.005, 'train_freq': 1, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.5489419609237923, 'net_arch': 'medium'}. Best is trial 3 with value: -147.41730760000002.
+[I 2024-12-10 18:46:01,822] Trial 4 finished with value: -1388.456876 and parameters: {'gamma': 0.98, 'learning_rate': 0.013815084639281881, 'batch_size': 32, 'buffer_size': 10000, 'tau': 0.08, 'train_freq': 16, 'noise_type': 'normal', 'noise_std': 0.7243927522630079, 'net_arch': 'medium'}. Best is trial 3 with value: -147.41730760000002.
+[I 2024-12-10 18:49:29,580] Trial 5 finished with value: -152.0875128 and parameters: {'gamma': 0.98, 'learning_rate': 0.012427695786813964, 'batch_size': 100, 'buffer_size': 100000, 'tau': 0.005, 'train_freq': 4, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.8933497487677735, 'net_arch': 'medium'}. Best is trial 3 with value: -147.41730760000002.
+[I 2024-12-10 18:53:28,385] Trial 6 finished with value: -152.3351418 and parameters: {'gamma': 0.98, 'learning_rate': 5.352789783801343e-05, 'batch_size': 128, 'buffer_size': 1000000, 'tau': 0.01, 'train_freq': 32, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.9805260882095511, 'net_arch': 'big'}. Best is trial 3 with value: -147.41730760000002.
+[I 2024-12-10 19:14:19,525] Trial 7 finished with value: -145.9356124 and parameters: {'gamma': 0.98, 'learning_rate': 0.001312211086603176, 'batch_size': 2048, 'buffer_size': 100000, 'tau': 0.01, 'train_freq': 16, 'noise_type': None, 'noise_std': 0.11837464009203724, 'net_arch': 'medium'}. Best is trial 7 with value: -145.9356124.
+[I 2024-12-10 19:16:34,476] Trial 8 finished with value: -145.5451854 and parameters: {'gamma': 0.98, 'learning_rate': 0.0001961889603977891, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.005, 'train_freq': 4, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.8512031228683596, 'net_arch': 'medium'}. Best is trial 8 with value: -145.5451854.
+[I 2024-12-10 19:45:57,780] Trial 9 finished with value: -155.56684959999998 and parameters: {'gamma': 0.98, 'learning_rate': 0.0001290751873066785, 'batch_size': 2048, 'buffer_size': 10000, 'tau': 0.001, 'train_freq': 8, 'noise_type': None, 'noise_std': 0.08706095540847247, 'net_arch': 'big'}. Best is trial 8 with value: -145.5451854.
+[I 2024-12-10 19:48:35,071] Trial 10 pruned. 
+[I 2024-12-10 19:52:39,176] Trial 11 finished with value: -148.30731959999997 and parameters: {'gamma': 0.98, 'learning_rate': 0.006247949806563234, 'batch_size': 256, 'buffer_size': 100000, 'tau': 0.01, 'train_freq': 64, 'noise_type': None, 'noise_std': 0.15196822260876441, 'net_arch': 'medium'}. Best is trial 8 with value: -145.5451854.
+[I 2024-12-10 20:13:10,734] Trial 12 pruned. 
+[I 2024-12-10 20:14:42,090] Trial 13 pruned. 
+[I 2024-12-10 20:33:46,088] Trial 14 finished with value: -144.9685024 and parameters: {'gamma': 0.98, 'learning_rate': 6.642016241822358e-05, 'batch_size': 2048, 'buffer_size': 1000000, 'tau': 0.01, 'train_freq': 16, 'noise_type': 'normal', 'noise_std': 0.25988142775619055, 'net_arch': 'medium'}. Best is trial 14 with value: -144.9685024.
+[I 2024-12-10 20:37:20,712] Trial 15 finished with value: -149.52462380000003 and parameters: {'gamma': 0.98, 'learning_rate': 4.80522412187069e-05, 'batch_size': 256, 'buffer_size': 1000000, 'tau': 0.01, 'train_freq': 32, 'noise_type': 'normal', 'noise_std': 0.10672486755497756, 'net_arch': 'medium'}. Best is trial 14 with value: -144.9685024.
+[I 2024-12-10 21:07:21,542] Trial 16 pruned. 
+[I 2024-12-10 21:26:43,547] Trial 17 finished with value: -145.98075580000003 and parameters: {'gamma': 0.98, 'learning_rate': 3.545689840457814e-05, 'batch_size': 2048, 'buffer_size': 1000000, 'tau': 0.005, 'train_freq': 16, 'noise_type': 'normal', 'noise_std': 0.5448780213117788, 'net_arch': 'medium'}. Best is trial 14 with value: -144.9685024.
+[I 2024-12-10 21:28:51,533] Trial 18 pruned. 
+[I 2024-12-10 21:31:29,790] Trial 19 pruned. 
+[I 2024-12-10 21:34:26,389] Trial 20 finished with value: -147.2333984 and parameters: {'gamma': 0.98, 'learning_rate': 0.00017441444163677548, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.05, 'train_freq': 64, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.5640107356701514, 'net_arch': 'big'}. Best is trial 14 with value: -144.9685024.
+[I 2024-12-10 21:53:27,098] Trial 21 pruned. 
+[I 2024-12-10 21:55:40,040] Trial 22 finished with value: -145.55582180000002 and parameters: {'gamma': 0.98, 'learning_rate': 0.00030017432501648427, 'batch_size': 16, 'buffer_size': 100000, 'tau': 0.01, 'train_freq': 16, 'noise_type': 'normal', 'noise_std': 0.11932441603417217, 'net_arch': 'medium'}. Best is trial 14 with value: -144.9685024.
+[I 2024-12-10 21:58:22,553] Trial 23 pruned. 
+[I 2024-12-10 22:06:45,349] Trial 24 finished with value: -148.1717696 and parameters: {'gamma': 0.98, 'learning_rate': 4.622700966145631e-05, 'batch_size': 512, 'buffer_size': 100000, 'tau': 0.01, 'train_freq': 512, 'noise_type': 'normal', 'noise_std': 0.10201385522040188, 'net_arch': 'big'}. Best is trial 14 with value: -144.9685024.
+[I 2024-12-10 22:08:08,143] Trial 25 pruned. 
+[I 2024-12-10 22:27:44,489] Trial 26 pruned. 
+[I 2024-12-10 22:29:54,304] Trial 27 finished with value: -146.998019 and parameters: {'gamma': 0.98, 'learning_rate': 0.00029597314443686356, 'batch_size': 32, 'buffer_size': 10000, 'tau': 0.01, 'train_freq': 16, 'noise_type': 'normal', 'noise_std': 0.2016415991008932, 'net_arch': 'medium'}. Best is trial 14 with value: -144.9685024.
+[I 2024-12-10 22:32:17,073] Trial 28 finished with value: -145.9078062 and parameters: {'gamma': 0.98, 'learning_rate': 0.00035350405469650127, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.02, 'train_freq': 16, 'noise_type': 'normal', 'noise_std': 0.16233182719768016, 'net_arch': 'medium'}. Best is trial 14 with value: -144.9685024.
+[I 2024-12-10 22:35:05,455] Trial 29 pruned. 
+[I 2024-12-10 22:37:39,465] Trial 30 pruned. 
+[I 2024-12-10 22:40:40,090] Trial 31 pruned. 
+[I 2024-12-10 22:42:54,841] Trial 32 finished with value: -144.3223702 and parameters: {'gamma': 0.98, 'learning_rate': 0.0002322992095547826, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.02, 'train_freq': 256, 'noise_type': None, 'noise_std': 0.2153136644839655, 'net_arch': 'medium'}. Best is trial 32 with value: -144.3223702.
+[I 2024-12-10 22:45:29,696] Trial 33 pruned. 
+[I 2024-12-10 22:48:08,031] Trial 34 pruned. 
+[I 2024-12-10 22:50:35,605] Trial 35 finished with value: -145.2144814 and parameters: {'gamma': 0.98, 'learning_rate': 0.00041676806862781397, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.005, 'train_freq': 256, 'noise_type': None, 'noise_std': 0.3907392922843124, 'net_arch': 'medium'}. Best is trial 32 with value: -144.3223702.
+[I 2024-12-10 22:53:33,678] Trial 36 finished with value: -145.25399880000003 and parameters: {'gamma': 0.98, 'learning_rate': 0.0001999493710222342, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.02, 'train_freq': 128, 'noise_type': None, 'noise_std': 0.3831707899317143, 'net_arch': 'big'}. Best is trial 32 with value: -144.3223702.
+[I 2024-12-10 22:55:35,306] Trial 37 pruned. 
+[I 2024-12-10 22:58:54,019] Trial 38 finished with value: -145.7545506 and parameters: {'gamma': 0.98, 'learning_rate': 0.0008623910387976544, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.02, 'train_freq': 128, 'noise_type': None, 'noise_std': 0.48913939354411085, 'net_arch': 'big'}. Best is trial 32 with value: -144.3223702.
+[I 2024-12-10 23:08:52,676] Trial 39 finished with value: -146.80557059999998 and parameters: {'gamma': 0.98, 'learning_rate': 0.00028626512434535596, 'batch_size': 1024, 'buffer_size': 1000000, 'tau': 0.005, 'train_freq': 32, 'noise_type': None, 'noise_std': 0.42362161200056536, 'net_arch': 'medium'}. Best is trial 32 with value: -144.3223702.
+[I 2024-12-10 23:10:56,756] Trial 40 pruned. 
+[I 2024-12-10 23:12:18,238] Trial 41 pruned. 
+[I 2024-12-10 23:14:11,697] Trial 42 pruned. 
+[I 2024-12-10 23:17:33,917] Trial 43 pruned. 
+[I 2024-12-10 23:36:52,403] Trial 44 pruned. 
+[I 2024-12-10 23:39:57,689] Trial 45 finished with value: -145.184712 and parameters: {'gamma': 0.98, 'learning_rate': 0.0003048137347867959, 'batch_size': 64, 'buffer_size': 10000, 'tau': 0.005, 'train_freq': 4, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.9342208463281, 'net_arch': 'big'}. Best is trial 32 with value: -144.3223702.
+[I 2024-12-10 23:43:31,180] Trial 46 pruned. 
+[I 2024-12-10 23:46:06,841] Trial 47 finished with value: -145.25361600000002 and parameters: {'gamma': 0.98, 'learning_rate': 0.0007665594722903093, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.02, 'train_freq': 256, 'noise_type': None, 'noise_std': 0.4288842680903374, 'net_arch': 'medium'}. Best is trial 32 with value: -144.3223702.
+[I 2024-12-11 00:05:42,628] Trial 48 pruned. 
+[I 2024-12-11 00:08:14,637] Trial 49 finished with value: -146.2757542 and parameters: {'gamma': 0.98, 'learning_rate': 0.00016835617115426943, 'batch_size': 32, 'buffer_size': 10000, 'tau': 0.01, 'train_freq': 4, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.7465280577009181, 'net_arch': 'big'}. Best is trial 32 with value: -144.3223702.
+========== Pendulum-v1 ==========
+Seed: 3314065055
+Loading hyperparameters from: /root/github/advanced_ml/Exercise2/rl-baselines3-zoo/hyperparams/ddpg.yml
+Default hyperparameters for environment (ones being tuned will be overridden):
+OrderedDict([('buffer_size', 200000),
+             ('gamma', 0.98),
+             ('gradient_steps', 1),
+             ('learning_rate', 0.001),
+             ('learning_starts', 10000),
+             ('n_timesteps', 20000),
+             ('noise_std', 0.1),
+             ('noise_type', 'normal'),
+             ('policy', 'MlpPolicy'),
+             ('policy_kwargs', 'dict(net_arch=[400, 300])'),
+             ('train_freq', 1)])
+Using 1 environments
+Overwriting n_timesteps with n=25000
+Doing 1 intermediate evaluations for pruning based on the number of timesteps. (1 evaluation every 100k timesteps)
+Applying normal noise with std 0.1
+Optimizing hyperparameters
+Sampler: tpe - Pruner: median
+Number of finished trials:  50
+Best trial:
+Value:  -144.3223702
+Params: 
+    gamma: 0.98
+    learning_rate: 0.0002322992095547826
+    batch_size: 64
+    buffer_size: 1000000
+    tau: 0.02
+    train_freq: 256
+    noise_type: None
+    noise_std: 0.2153136644839655
+    net_arch: medium
+Writing report to ddpg/ddpg/report_Pendulum-v1_50-trials-25000-tpe-median_1733875694
+/root/github/advanced_ml/Exercise2/venv/lib/python3.12/site-packages/optuna/_experimental.py:31: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+[I 2024-12-11 00:08:17,721] A new study created in memory with name: no-name-02822f23-a12d-42cc-98d4-a0db4cfe90a4
+[I 2024-12-11 00:11:11,990] Trial 0 finished with value: -170.1200988 and parameters: {'gamma': 0.98, 'learning_rate': 0.0018775318726263963, 'batch_size': 64, 'buffer_size': 100000, 'tau': 0.02, 'train_freq': 4, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.6559348983522968, 'net_arch': 'medium'}. Best is trial 0 with value: -170.1200988.
+[I 2024-12-11 00:14:00,512] Trial 1 finished with value: -170.8590788 and parameters: {'gamma': 0.98, 'learning_rate': 0.0026249903524404113, 'batch_size': 32, 'buffer_size': 1000000, 'tau': 0.02, 'train_freq': 128, 'noise_type': 'normal', 'noise_std': 0.8833577828404736, 'net_arch': 'medium'}. Best is trial 0 with value: -170.1200988.
+[I 2024-12-11 00:17:27,962] Trial 2 finished with value: -170.360041 and parameters: {'gamma': 0.98, 'learning_rate': 0.002672179618714738, 'batch_size': 64, 'buffer_size': 10000, 'tau': 0.08, 'train_freq': 128, 'noise_type': None, 'noise_std': 0.3664305545668013, 'net_arch': 'big'}. Best is trial 0 with value: -170.1200988.
+[I 2024-12-11 00:20:45,696] Trial 3 finished with value: -185.3450382 and parameters: {'gamma': 0.98, 'learning_rate': 0.0015142425858563234, 'batch_size': 128, 'buffer_size': 10000, 'tau': 0.08, 'train_freq': 1, 'noise_type': 'normal', 'noise_std': 0.23734062537868583, 'net_arch': 'medium'}. Best is trial 0 with value: -170.1200988.
+[I 2024-12-11 00:23:31,317] Trial 4 finished with value: -192.4073262 and parameters: {'gamma': 0.98, 'learning_rate': 0.00014390196417306261, 'batch_size': 128, 'buffer_size': 10000, 'tau': 0.08, 'train_freq': 128, 'noise_type': 'normal', 'noise_std': 0.054978245108653456, 'net_arch': 'medium'}. Best is trial 0 with value: -170.1200988.
+[I 2024-12-11 00:47:46,683] Trial 5 finished with value: -171.9675106 and parameters: {'gamma': 0.98, 'learning_rate': 0.0014079411350161363, 'batch_size': 2048, 'buffer_size': 10000, 'tau': 0.08, 'train_freq': 64, 'noise_type': 'normal', 'noise_std': 0.5204794195051874, 'net_arch': 'medium'}. Best is trial 0 with value: -170.1200988.
+[I 2024-12-11 00:50:37,524] Trial 6 finished with value: -192.0553894 and parameters: {'gamma': 0.98, 'learning_rate': 0.00027774426121725374, 'batch_size': 128, 'buffer_size': 10000, 'tau': 0.05, 'train_freq': 16, 'noise_type': None, 'noise_std': 0.6503170217209453, 'net_arch': 'medium'}. Best is trial 0 with value: -170.1200988.
+[I 2024-12-11 00:54:39,445] Trial 7 finished with value: -169.4087716 and parameters: {'gamma': 0.98, 'learning_rate': 0.0024691133479127587, 'batch_size': 256, 'buffer_size': 100000, 'tau': 0.05, 'train_freq': 64, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.5804414787218183, 'net_arch': 'medium'}. Best is trial 7 with value: -169.4087716.
+[I 2024-12-11 00:56:11,782] Trial 8 finished with value: -169.6634082 and parameters: {'gamma': 0.98, 'learning_rate': 0.0006784032193071002, 'batch_size': 512, 'buffer_size': 10000, 'tau': 0.005, 'train_freq': 128, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.8688356967025642, 'net_arch': 'small'}. Best is trial 7 with value: -169.4087716.
+[I 2024-12-11 01:01:25,338] Trial 9 finished with value: -1366.388729 and parameters: {'gamma': 0.98, 'learning_rate': 0.22131915973162364, 'batch_size': 128, 'buffer_size': 10000, 'tau': 0.001, 'train_freq': 8, 'noise_type': None, 'noise_std': 0.25435683432833955, 'net_arch': 'medium'}. Best is trial 7 with value: -169.4087716.
+[I 2024-12-11 01:11:42,617] Trial 10 pruned. 
+[I 2024-12-11 01:13:13,338] Trial 11 pruned. 
+[I 2024-12-11 01:15:52,572] Trial 12 finished with value: -168.52738959999996 and parameters: {'gamma': 0.98, 'learning_rate': 0.0006531589679198859, 'batch_size': 64, 'buffer_size': 100000, 'tau': 0.05, 'train_freq': 64, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.12799166680279606, 'net_arch': 'medium'}. Best is trial 12 with value: -168.52738959999996.
+[I 2024-12-11 01:18:04,916] Trial 13 pruned. 
+[I 2024-12-11 01:22:50,275] Trial 14 pruned. 
+[I 2024-12-11 01:25:54,181] Trial 15 finished with value: -168.1971248 and parameters: {'gamma': 0.98, 'learning_rate': 0.003914484372581664, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.05, 'train_freq': 512, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.20915598759974188, 'net_arch': 'medium'}. Best is trial 15 with value: -168.1971248.
+[I 2024-12-11 01:29:23,796] Trial 16 finished with value: -168.12323080000002 and parameters: {'gamma': 0.98, 'learning_rate': 0.004699570853226147, 'batch_size': 128, 'buffer_size': 1000000, 'tau': 0.05, 'train_freq': 256, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.19630032675515818, 'net_arch': 'medium'}. Best is trial 16 with value: -168.12323080000002.
+[I 2024-12-11 01:33:57,208] Trial 17 finished with value: -170.1815434 and parameters: {'gamma': 0.98, 'learning_rate': 0.0015777169210989116, 'batch_size': 128, 'buffer_size': 1000000, 'tau': 0.05, 'train_freq': 256, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.43986762313750466, 'net_arch': 'big'}. Best is trial 16 with value: -168.12323080000002.
+[I 2024-12-11 01:37:23,532] Trial 18 pruned. 
+[I 2024-12-11 01:40:41,471] Trial 19 pruned. 
+[I 2024-12-11 01:43:38,101] Trial 20 pruned. 
+[I 2024-12-11 01:45:48,957] Trial 21 pruned. 
+[I 2024-12-11 01:48:04,247] Trial 22 finished with value: -169.2524848 and parameters: {'gamma': 0.98, 'learning_rate': 0.00024322482795084628, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.02, 'train_freq': 64, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.030529982961703866, 'net_arch': 'medium'}. Best is trial 16 with value: -168.12323080000002.
+[I 2024-12-11 01:50:55,263] Trial 23 finished with value: -168.14969100000002 and parameters: {'gamma': 0.98, 'learning_rate': 0.002066217411568374, 'batch_size': 64, 'buffer_size': 10000, 'tau': 0.05, 'train_freq': 256, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.0016839009041847153, 'net_arch': 'medium'}. Best is trial 16 with value: -168.12323080000002.
+[I 2024-12-11 01:54:54,400] Trial 24 pruned. 
+[I 2024-12-11 01:57:07,490] Trial 25 pruned. 
+[I 2024-12-11 02:00:41,420] Trial 26 pruned. 
+[I 2024-12-11 02:02:32,562] Trial 27 pruned. 
+[I 2024-12-11 02:06:29,267] Trial 28 pruned. 
+[I 2024-12-11 02:16:56,475] Trial 29 pruned. 
+[I 2024-12-11 02:18:16,287] Trial 30 finished with value: -167.12878960000003 and parameters: {'gamma': 0.98, 'learning_rate': 0.0011129017239161613, 'batch_size': 64, 'buffer_size': 1000000, 'tau': 0.08, 'train_freq': 256, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.05653466866216936, 'net_arch': 'small'}. Best is trial 30 with value: -167.12878960000003.
+[I 2024-12-11 02:21:36,381] Trial 31 pruned. 
+[I 2024-12-11 02:22:52,203] Trial 32 pruned. 
+[I 2024-12-11 02:26:06,330] Trial 33 pruned. 
+[I 2024-12-11 02:29:25,592] Trial 34 finished with value: -170.07697159999998 and parameters: {'gamma': 0.98, 'learning_rate': 0.0033902548918220018, 'batch_size': 128, 'buffer_size': 1000000, 'tau': 0.05, 'train_freq': 16, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.0362958289377982, 'net_arch': 'medium'}. Best is trial 30 with value: -167.12878960000003.
+[I 2024-12-11 02:33:23,004] Trial 35 pruned. 
+[I 2024-12-11 02:36:10,430] Trial 36 pruned. 
+[I 2024-12-11 02:38:56,153] Trial 37 pruned. 
+[I 2024-12-11 02:40:26,260] Trial 38 pruned. 
+[I 2024-12-11 02:46:39,941] Trial 39 pruned. 
+[I 2024-12-11 02:50:09,738] Trial 40 pruned. 
+[I 2024-12-11 02:53:31,526] Trial 41 pruned. 
+[I 2024-12-11 02:56:24,946] Trial 42 finished with value: -169.2946238 and parameters: {'gamma': 0.98, 'learning_rate': 0.0016141598868090383, 'batch_size': 64, 'buffer_size': 100000, 'tau': 0.05, 'train_freq': 512, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.1894430425267197, 'net_arch': 'medium'}. Best is trial 30 with value: -167.12878960000003.
+[I 2024-12-11 03:07:12,745] Trial 43 finished with value: -168.2997882 and parameters: {'gamma': 0.98, 'learning_rate': 0.002653550748513721, 'batch_size': 1024, 'buffer_size': 100000, 'tau': 0.08, 'train_freq': 64, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.1487153710661818, 'net_arch': 'medium'}. Best is trial 30 with value: -167.12878960000003.
+[I 2024-12-11 03:09:01,971] Trial 44 pruned. 
+[I 2024-12-11 03:10:29,322] Trial 45 pruned. 
+[I 2024-12-11 03:32:23,705] Trial 46 pruned. 
+[I 2024-12-11 03:43:17,817] Trial 47 finished with value: -167.3597612 and parameters: {'gamma': 0.98, 'learning_rate': 0.0026831791058365352, 'batch_size': 1024, 'buffer_size': 100000, 'tau': 0.01, 'train_freq': 128, 'noise_type': 'ornstein-uhlenbeck', 'noise_std': 0.02885592369644055, 'net_arch': 'medium'}. Best is trial 30 with value: -167.12878960000003.
+[I 2024-12-11 03:49:35,094] Trial 48 finished with value: -169.6315608 and parameters: {'gamma': 0.98, 'learning_rate': 0.0008558352777677631, 'batch_size': 512, 'buffer_size': 100000, 'tau': 0.01, 'train_freq': 128, 'noise_type': 'normal', 'noise_std': 0.10856133643450451, 'net_arch': 'medium'}. Best is trial 30 with value: -167.12878960000003.
+[I 2024-12-11 04:00:39,928] Trial 49 pruned. 
+========== Pendulum-v1 ==========
+Seed: 3730940181
+Loading hyperparameters from: /root/github/advanced_ml/Exercise2/rl-baselines3-zoo/hyperparams/td3.yml
+Default hyperparameters for environment (ones being tuned will be overridden):
+OrderedDict([('buffer_size', 200000),
+             ('gamma', 0.98),
+             ('gradient_steps', 1),
+             ('learning_rate', 0.001),
+             ('learning_starts', 10000),
+             ('n_timesteps', 20000),
+             ('noise_std', 0.1),
+             ('noise_type', 'normal'),
+             ('policy', 'MlpPolicy'),
+             ('policy_kwargs', 'dict(net_arch=[400, 300])'),
+             ('train_freq', 1)])
+Using 1 environments
+Overwriting n_timesteps with n=25000
+Doing 1 intermediate evaluations for pruning based on the number of timesteps. (1 evaluation every 100k timesteps)
+Applying normal noise with std 0.1
+Optimizing hyperparameters
+Sampler: tpe - Pruner: median
+Number of finished trials:  50
+Best trial:
+Value:  -167.12878960000003
+Params: 
+    gamma: 0.98
+    learning_rate: 0.0011129017239161613
+    batch_size: 64
+    buffer_size: 1000000
+    tau: 0.08
+    train_freq: 256
+    noise_type: ornstein-uhlenbeck
+    noise_std: 0.05653466866216936
+    net_arch: small
+Writing report to td3/td3/report_Pendulum-v1_50-trials-25000-tpe-median_1733889639
+/root/github/advanced_ml/Exercise2/venv/lib/python3.12/site-packages/optuna/_experimental.py:31: ExperimentalWarning: Argument ``multivariate`` is an experimental feature. The interface can change in the future.
+  warnings.warn(
+[I 2024-12-11 04:00:42,985] A new study created in memory with name: no-name-32effac5-d7a7-4527-b2c9-53f83b3a63f3
+[I 2024-12-11 04:00:45,003] Trial 0 pruned. 
+[I 2024-12-11 04:03:50,087] Trial 1 finished with value: -1170.9680084 and parameters: {'gamma': 0.98, 'learning_rate': 3.0979580160525174e-05, 'batch_size': 16, 'buffer_size': 10000, 'learning_starts': 10000, 'train_freq': 4, 'tau': 0.005, 'log_std_init': -2.445070104266855, 'net_arch': 'medium'}. Best is trial 1 with value: -1170.9680084.
+[I 2024-12-11 05:26:31,302] Trial 2 finished with value: -199.82772519999997 and parameters: {'gamma': 0.98, 'learning_rate': 0.01514067896266551, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 512, 'tau': 0.05, 'log_std_init': -0.9275632127605147, 'net_arch': 'big'}. Best is trial 2 with value: -199.82772519999997.
+[I 2024-12-11 05:26:32,989] Trial 3 pruned. 
+[I 2024-12-11 05:53:34,742] Trial 4 finished with value: -206.14288900000003 and parameters: {'gamma': 0.98, 'learning_rate': 0.0007588595577385696, 'batch_size': 1024, 'buffer_size': 1000000, 'learning_starts': 1000, 'train_freq': 512, 'tau': 0.08, 'log_std_init': -3.4733771796285966, 'net_arch': 'medium'}. Best is trial 2 with value: -199.82772519999997.
+[I 2024-12-11 05:53:42,518] Trial 5 pruned. 
+[I 2024-12-11 06:00:15,344] Trial 6 finished with value: -205.85734779999999 and parameters: {'gamma': 0.98, 'learning_rate': 0.00034207328183841055, 'batch_size': 128, 'buffer_size': 10000, 'learning_starts': 10000, 'train_freq': 4, 'tau': 0.005, 'log_std_init': -3.966512481538212, 'net_arch': 'big'}. Best is trial 2 with value: -199.82772519999997.
+[I 2024-12-11 06:41:47,942] Trial 7 finished with value: -720.3216856 and parameters: {'gamma': 0.98, 'learning_rate': 2.022323410151494e-05, 'batch_size': 1024, 'buffer_size': 10000, 'learning_starts': 0, 'train_freq': 256, 'tau': 0.08, 'log_std_init': -0.5731201508336161, 'net_arch': 'big'}. Best is trial 2 with value: -199.82772519999997.
+[I 2024-12-11 06:43:13,043] Trial 8 finished with value: -209.3814972 and parameters: {'gamma': 0.98, 'learning_rate': 0.0008669778527549367, 'batch_size': 64, 'buffer_size': 1000000, 'learning_starts': 20000, 'train_freq': 1, 'tau': 0.01, 'log_std_init': -0.886519615755875, 'net_arch': 'medium'}. Best is trial 2 with value: -199.82772519999997.
+[I 2024-12-11 06:52:08,608] Trial 9 finished with value: -210.09726719999998 and parameters: {'gamma': 0.98, 'learning_rate': 0.02156290451514205, 'batch_size': 32, 'buffer_size': 1000000, 'learning_starts': 0, 'train_freq': 32, 'tau': 0.08, 'log_std_init': -2.878660847548701, 'net_arch': 'big'}. Best is trial 2 with value: -199.82772519999997.
+[I 2024-12-11 07:09:00,256] Trial 10 finished with value: -196.5264368 and parameters: {'gamma': 0.98, 'learning_rate': 0.00245040478330128, 'batch_size': 256, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 512, 'tau': 0.05, 'log_std_init': -2.2703035570646186, 'net_arch': 'big'}. Best is trial 10 with value: -196.5264368.
+[I 2024-12-11 07:15:52,377] Trial 11 finished with value: -211.74791019999998 and parameters: {'gamma': 0.98, 'learning_rate': 0.000530363229794137, 'batch_size': 16, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 512, 'tau': 0.05, 'log_std_init': -1.3107247925407495, 'net_arch': 'big'}. Best is trial 10 with value: -196.5264368.
+[I 2024-12-11 07:16:04,841] Trial 12 pruned. 
+[I 2024-12-11 07:27:08,745] Trial 13 finished with value: -198.7213348 and parameters: {'gamma': 0.98, 'learning_rate': 0.021099630823807343, 'batch_size': 256, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 512, 'tau': 0.05, 'log_std_init': -1.9943638606588747, 'net_arch': 'medium'}. Best is trial 10 with value: -196.5264368.
+[I 2024-12-11 07:38:24,541] Trial 14 finished with value: -205.8586244 and parameters: {'gamma': 0.98, 'learning_rate': 0.040262411210383084, 'batch_size': 256, 'buffer_size': 100000, 'learning_starts': 0, 'train_freq': 512, 'tau': 0.005, 'log_std_init': -2.4533649979474683, 'net_arch': 'medium'}. Best is trial 10 with value: -196.5264368.
+[I 2024-12-11 07:47:52,489] Trial 15 pruned. 
+[I 2024-12-11 08:03:23,755] Trial 16 pruned. 
+[I 2024-12-11 08:14:14,871] Trial 17 pruned. 
+========== Pendulum-v1 ==========
+Seed: 1082581027
+Loading hyperparameters from: /root/github/advanced_ml/Exercise2/rl-baselines3-zoo/hyperparams/sac.yml
+Default hyperparameters for environment (ones being tuned will be overridden):
+OrderedDict([('learning_rate', 0.001),
+             ('n_timesteps', 20000),
+             ('policy', 'MlpPolicy')])
+Using 1 environments
+Overwriting n_timesteps with n=25000
+Doing 1 intermediate evaluations for pruning based on the number of timesteps. (1 evaluation every 100k timesteps)
+Optimizing hyperparameters
+Sampler: tpe - Pruner: median
+Expected parameter loc (Tensor of shape (128, 1)) of distribution Normal(loc: torch.Size([128, 1]), scale: torch.Size([128, 1])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan]], grad_fn=<AddmmBackward0>)
+============
+Sampled hyperparams:
+{'batch_size': 128,
+ 'buffer_size': 1000000,
+ 'ent_coef': 'auto',
+ 'gamma': 0.98,
+ 'gradient_steps': 4,
+ 'learning_rate': 0.741770314574336,
+ 'learning_starts': 1000,
+ 'policy_kwargs': {'log_std_init': -1.2212771495789023,
+                   'net_arch': [256, 256],
+                   'use_sde': False},
+ 'target_entropy': 'auto',
+ 'tau': 0.08,
+ 'train_freq': 4}
+Expected parameter loc (Tensor of shape (128, 1)) of distribution Normal(loc: torch.Size([128, 1]), scale: torch.Size([128, 1])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan]], grad_fn=<AddmmBackward0>)
+============
+Sampled hyperparams:
+{'batch_size': 128,
+ 'buffer_size': 10000,
+ 'ent_coef': 'auto',
+ 'gamma': 0.98,
+ 'gradient_steps': 256,
+ 'learning_rate': 0.3037748322834375,
+ 'learning_starts': 0,
+ 'policy_kwargs': {'log_std_init': -0.15774530542622722,
+                   'net_arch': [64, 64],
+                   'use_sde': False},
+ 'target_entropy': 'auto',
+ 'tau': 0.01,
+ 'train_freq': 256}
+Expected parameter loc (Tensor of shape (64, 1)) of distribution Normal(loc: torch.Size([64, 1]), scale: torch.Size([64, 1])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan]], grad_fn=<AddmmBackward0>)
+============
+Sampled hyperparams:
+{'batch_size': 64,
+ 'buffer_size': 100000,
+ 'ent_coef': 'auto',
+ 'gamma': 0.98,
+ 'gradient_steps': 64,
+ 'learning_rate': 0.16211876309466444,
+ 'learning_starts': 20000,
+ 'policy_kwargs': {'log_std_init': -2.0083003243791184,
+                   'net_arch': [400, 300],
+                   'use_sde': False},
+ 'target_entropy': 'auto',
+ 'tau': 0.05,
+ 'train_freq': 64}
+Expected parameter loc (Tensor of shape (2048, 1)) of distribution Normal(loc: torch.Size([2048, 1]), scale: torch.Size([2048, 1])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan],
+        [nan],
+        [nan],
+        ...,
+        [nan],
+        [nan],
+        [nan]], grad_fn=<AddmmBackward0>)
+============
+Sampled hyperparams:
+{'batch_size': 2048,
+ 'buffer_size': 100000,
+ 'ent_coef': 'auto',
+ 'gamma': 0.98,
+ 'gradient_steps': 32,
+ 'learning_rate': 0.9170722079823478,
+ 'learning_starts': 1000,
+ 'policy_kwargs': {'log_std_init': 0.02994998005607008,
+                   'net_arch': [400, 300],
+                   'use_sde': False},
+ 'target_entropy': 'auto',
+ 'tau': 0.05,
+ 'train_freq': 32}
+[I 2024-12-11 08:14:18,350] Trial 18 pruned. 
+[I 2024-12-11 08:29:52,836] Trial 19 finished with value: -203.5168974 and parameters: {'gamma': 0.98, 'learning_rate': 0.002166394667276442, 'batch_size': 512, 'buffer_size': 10000, 'learning_starts': 1000, 'train_freq': 512, 'tau': 0.05, 'log_std_init': -1.7234721774385298, 'net_arch': 'medium'}. Best is trial 10 with value: -196.5264368.
+[I 2024-12-11 08:40:16,633] Trial 20 finished with value: -201.8468512 and parameters: {'gamma': 0.98, 'learning_rate': 0.0033579207398636702, 'batch_size': 256, 'buffer_size': 10000, 'learning_starts': 10000, 'train_freq': 8, 'tau': 0.05, 'log_std_init': -1.7886427157040488, 'net_arch': 'big'}. Best is trial 10 with value: -196.5264368.
+[I 2024-12-11 08:57:06,277] Trial 21 pruned. 
+[I 2024-12-11 08:57:59,726] Trial 22 finished with value: -200.4486168 and parameters: {'gamma': 0.98, 'learning_rate': 0.004818883155383444, 'batch_size': 256, 'buffer_size': 100000, 'learning_starts': 20000, 'train_freq': 512, 'tau': 0.05, 'log_std_init': -1.3095314538652707, 'net_arch': 'small'}. Best is trial 10 with value: -196.5264368.
+[I 2024-12-11 09:07:14,129] Trial 23 pruned. 
+[I 2024-12-11 09:58:15,661] Trial 24 finished with value: -195.84527039999998 and parameters: {'gamma': 0.98, 'learning_rate': 0.0014629696659627502, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 10000, 'train_freq': 512, 'tau': 0.005, 'log_std_init': -0.28483891899414027, 'net_arch': 'big'}. Best is trial 24 with value: -195.84527039999998.
+[I 2024-12-11 11:18:56,954] Trial 25 finished with value: -197.2806214 and parameters: {'gamma': 0.98, 'learning_rate': 0.0006242106977212753, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 256, 'tau': 0.005, 'log_std_init': 0.32600274256781714, 'net_arch': 'big'}. Best is trial 24 with value: -195.84527039999998.
+[I 2024-12-11 12:21:49,000] Trial 26 finished with value: -197.94267399999998 and parameters: {'gamma': 0.98, 'learning_rate': 0.0015745433411354479, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 10000, 'train_freq': 1, 'tau': 0.005, 'log_std_init': -0.6758176753474491, 'net_arch': 'big'}. Best is trial 24 with value: -195.84527039999998.
+[I 2024-12-11 12:33:25,529] Trial 27 pruned. 
+[I 2024-12-11 12:49:41,971] Trial 28 finished with value: -203.39220720000003 and parameters: {'gamma': 0.98, 'learning_rate': 0.00016400248184833053, 'batch_size': 256, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 32, 'tau': 0.005, 'log_std_init': 0.4767852592711067, 'net_arch': 'big'}. Best is trial 24 with value: -195.84527039999998.
+[I 2024-12-11 12:53:55,213] Trial 29 pruned. 
+[I 2024-12-11 13:09:45,626] Trial 30 pruned. 
+[I 2024-12-11 13:59:06,256] Trial 31 pruned. 
+[I 2024-12-11 14:03:38,853] Trial 32 finished with value: -200.1009688 and parameters: {'gamma': 0.98, 'learning_rate': 0.0021930599073765795, 'batch_size': 16, 'buffer_size': 100000, 'learning_starts': 10000, 'train_freq': 128, 'tau': 0.005, 'log_std_init': -0.7587385587947528, 'net_arch': 'big'}. Best is trial 24 with value: -195.84527039999998.
+[I 2024-12-11 15:03:05,186] Trial 33 finished with value: -197.4871368 and parameters: {'gamma': 0.98, 'learning_rate': 0.0005815018949165667, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 10000, 'train_freq': 512, 'tau': 0.08, 'log_std_init': -1.1530923299080311, 'net_arch': 'big'}. Best is trial 24 with value: -195.84527039999998.
+[I 2024-12-11 15:11:59,078] Trial 34 finished with value: -199.7138726 and parameters: {'gamma': 0.98, 'learning_rate': 0.0012819973055063069, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 256, 'tau': 0.01, 'log_std_init': -0.3098210791495445, 'net_arch': 'small'}. Best is trial 24 with value: -195.84527039999998.
+[I 2024-12-11 15:17:52,895] Trial 35 pruned. 
+[I 2024-12-11 15:26:39,647] Trial 36 pruned. 
+[I 2024-12-11 16:15:27,663] Trial 37 finished with value: -197.94846959999998 and parameters: {'gamma': 0.98, 'learning_rate': 0.00015829079855318447, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 10000, 'train_freq': 8, 'tau': 0.08, 'log_std_init': -1.380434997956153, 'net_arch': 'big'}. Best is trial 24 with value: -195.84527039999998.
+[I 2024-12-11 16:20:27,282] Trial 38 pruned. 
+[I 2024-12-11 16:24:07,486] Trial 39 pruned. 
+[I 2024-12-11 16:27:27,305] Trial 40 pruned. 
+[I 2024-12-11 17:48:41,661] Trial 41 finished with value: -194.78790120000002 and parameters: {'gamma': 0.98, 'learning_rate': 0.0076741155152266665, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 256, 'tau': 0.005, 'log_std_init': 0.20204202497002022, 'net_arch': 'big'}. Best is trial 41 with value: -194.78790120000002.
+[I 2024-12-11 19:08:24,073] Trial 42 finished with value: -196.49839060000002 and parameters: {'gamma': 0.98, 'learning_rate': 0.00257696286804088, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 16, 'tau': 0.08, 'log_std_init': 0.48616088087927234, 'net_arch': 'big'}. Best is trial 41 with value: -194.78790120000002.
+[I 2024-12-11 20:28:55,440] Trial 43 finished with value: -197.320829 and parameters: {'gamma': 0.98, 'learning_rate': 0.0009894288746497028, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 64, 'tau': 0.005, 'log_std_init': 0.8910366395854589, 'net_arch': 'big'}. Best is trial 41 with value: -194.78790120000002.
+[I 2024-12-11 20:37:43,121] Trial 44 pruned. 
+[I 2024-12-11 22:02:02,801] Trial 45 finished with value: -199.02825360000003 and parameters: {'gamma': 0.98, 'learning_rate': 0.002159510587670641, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 0, 'train_freq': 16, 'tau': 0.02, 'log_std_init': -0.19628045168786767, 'net_arch': 'big'}. Best is trial 41 with value: -194.78790120000002.
+[I 2024-12-11 23:23:42,589] Trial 46 finished with value: -195.7877546 and parameters: {'gamma': 0.98, 'learning_rate': 0.016119874897091855, 'batch_size': 2048, 'buffer_size': 100000, 'learning_starts': 1000, 'train_freq': 256, 'tau': 0.08, 'log_std_init': 0.266530169236617, 'net_arch': 'big'}. Best is trial 41 with value: -194.78790120000002.
+[I 2024-12-11 23:32:04,053] Trial 47 pruned. 
+[I 2024-12-11 23:47:21,627] Trial 48 pruned. 
+[I 2024-12-11 23:47:36,226] Trial 49 pruned. 
+Expected parameter loc (Tensor of shape (256, 1)) of distribution Normal(loc: torch.Size([256, 1]), scale: torch.Size([256, 1])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan],
+        [nan]], grad_fn=<AddmmBackward0>)
+============
+Sampled hyperparams:
+{'batch_size': 256,
+ 'buffer_size': 100000,
+ 'ent_coef': 'auto',
+ 'gamma': 0.98,
+ 'gradient_steps': 128,
+ 'learning_rate': 0.31801947369513206,
+ 'learning_starts': 1000,
+ 'policy_kwargs': {'log_std_init': -3.058312172653075,
+                   'net_arch': [256, 256],
+                   'use_sde': False},
+ 'target_entropy': 'auto',
+ 'tau': 0.05,
+ 'train_freq': 128}
+Expected parameter loc (Tensor of shape (1024, 1)) of distribution Normal(loc: torch.Size([1024, 1]), scale: torch.Size([1024, 1])) to satisfy the constraint Real(), but found invalid values:
+tensor([[nan],
+        [nan],
+        [nan],
+        ...,
+        [nan],
+        [nan],
+        [nan]], grad_fn=<AddmmBackward0>)
+============
+Sampled hyperparams:
+{'batch_size': 1024,
+ 'buffer_size': 100000,
+ 'ent_coef': 'auto',
+ 'gamma': 0.98,
+ 'gradient_steps': 256,
+ 'learning_rate': 0.3758005869181941,
+ 'learning_starts': 1000,
+ 'policy_kwargs': {'log_std_init': -0.7424623228857373,
+                   'net_arch': [400, 300],
+                   'use_sde': False},
+ 'target_entropy': 'auto',
+ 'tau': 0.08,
+ 'train_freq': 256}
+Number of finished trials:  50
+Best trial:
+Value:  -194.78790120000002
+Params: 
+    gamma: 0.98
+    learning_rate: 0.0076741155152266665
+    batch_size: 2048
+    buffer_size: 100000
+    learning_starts: 1000
+    train_freq: 256
+    tau: 0.005
+    log_std_init: 0.20204202497002022
+    net_arch: big
+Writing report to sac/sac/report_Pendulum-v1_50-trials-25000-tpe-median_1733960856
