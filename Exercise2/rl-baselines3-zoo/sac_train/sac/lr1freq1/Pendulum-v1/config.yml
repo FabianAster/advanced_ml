@@ -1,0 +1,22 @@
+!!python/object/apply:collections.OrderedDict
+- - - batch_size
+    - 2048
+  - - buffer_size
+    - 100000
+  - - gamma
+    - 0.98
+  - - learning_rate
+    - 1
+  - - n_timesteps
+    - 20000
+  - - policy
+    - MlpPolicy
+  - - policy_kwargs
+    - net_arch:
+      - 400
+      - 300
+      use_sde: false
+  - - tau
+    - 0.005
+  - - train_freq
+    - 1
