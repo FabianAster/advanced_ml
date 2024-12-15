@@ -83,12 +83,11 @@ def plot_train():
         # Do not plot the smoothed curve at all if the timeseries is shorter than window size.
         if x.shape[0] >= args.episode_window:
             # Compute and plot rolling mean with window of size args.episode_window
-            x, y_mean = window_func(x, y, args.episode_window, np.mean)
-            plt.plot(x, y_mean, linewidth=2, label=folder.split("/")[-1])
+            plt.plot(x, y, linewidth=2, label=folder.split("/")[-1])
 
     plt.legend()
     plt.tight_layout()
-    plt.savefig("training_plot.png")
+    plt.show()
 
 
 if __name__ == "__main__":
