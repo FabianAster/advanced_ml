@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Define an array of learning rates
-learning_rates=(0.01 0.001 0.0001)
+learning_rates=(0.1 1 10)
 
 # Define an array of network sizes
 train_freq=(1 8 32 128)

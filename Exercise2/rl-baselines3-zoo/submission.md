@@ -1,3 +1,13 @@
+
+# Hyperparameter tuning
+
+For the hyperparameter tuning i used the train.py internal optuna tuner.
+With it i had a bit troubles fixing the gamma, the arguments where always overwritten, so i hardcoded gamma inside of the python file.
+I let all other parameters get optimized.
+Below are the tables with each 50 different hyperparameter configurations.
+Somehow often a low update frequency lead to the best results, but when using the normal training script using these high update frequencies it didnt learn at all.
+Therefore i decided to use the update frequency as a changing hyperparameter for task 2.
+
 DDPG:
 
 | #  | value     | batch | buffer  | lr                | net   | noise_std | tau  | freq |
@@ -109,3 +119,96 @@ TD3:
 | 49 | -1498.5037548| 1024  | 100000  | 0.08259858245253404  | med   | 0.03662831506788966| 0.01 | 128  |
 
 zac:
+
+| #  | value       | batch | buffer  | lr                 | arch  | tau  | freq |
+|----|-------------|-------|---------|--------------------|-------|------|------|
+| 0  |             | 128   | 1000000 | 0.741770314574336  | med   | 0.08 | 4    |
+| 1  | -1170.9680084| 16   | 10000   | 3.0979580160525174e-05| med   | 0.005| 4    |
+| 2  | -199.82772519999997| 2048 | 100000 | 0.01514067896266551 | big   | 0.05 | 512  |
+| 3  |             | 128   | 10000   | 0.3037748322834375 | small | 0.01 | 256  |
+| 4  | -206.14288900000003| 1024 | 1000000 | 0.0007588595577385696| med   | 0.08 | 512  |
+| 5  |             | 64    | 100000  | 0.16211876309466444 | big   | 0.05 | 64   |
+| 6  | -205.85734779999999| 128   | 10000   | 0.00034207328183841055| big   | 0.005| 4    |
+| 7  | -720.3216856| 1024  | 10000   | 2.022323410151494e-05| big   | 0.08 | 256  |
+| 8  | -209.3814972| 64    | 1000000 | 0.0008669778527549367| med   | 0.01 | 1    |
+| 9  | -210.09726719999998| 32    | 1000000 | 0.02156290451514205 | big   | 0.08 | 32   |
+| 10 | -196.5264368| 256   | 100000  | 0.00245040478330128 | big   | 0.05 | 512  |
+| 11 | -211.74791019999998| 16    | 100000  | 0.000530363229794137 | big   | 0.05 | 512  |
+| 12 |             | 2048  | 100000  | 0.9170722079823478 | big   | 0.05 | 32   |
+| 13 | -198.7213348| 256   | 100000  | 0.021099630823807343| med   | 0.05 | 512  |
+| 14 | -205.8586244| 256   | 100000  | 0.040262411210383084| med   | 0.005| 512  |
+| 15 | -209.28209  | 256   | 100000  | 0.0004803920636485792| med   | 0.05 | 256  |
+| 16 | -949.1057506| 256   | 10000   | 1.8446669052736592e-05| big   | 0.05 | 512  |
+| 17 | -1351.7214056| 256  | 100000  | 0.023006385768634514| med   | 0.01 | 128  |
+| 18 |             | 256   | 100000  | 0.31801947369513206| med   | 0.05 | 128  |
+| 19 | -203.5168974| 512   | 10000   | 0.002166394667276442| med   | 0.05 | 512  |
+| 20 | -201.8468512| 256   | 10000   | 0.0033579207398636702| big   | 0.05 | 8    |
+| 21 | -1471.7651535999998| 256 | 1000000 | 0.027273845025851513| big   | 0.01 | 512  |
+| 22 | -200.4486168| 256   | 100000  | 0.004818883155383444| small | 0.05 | 512  |
+| 23 | -213.5920274| 128   | 100000  | 0.037375834131464114| med   | 0.05 | 512  |
+| 24 | -195.84527039999998| 2048 | 100000 | 0.0014629696659627502| big   | 0.005| 512  |
+| 25 | -197.2806214| 2048  | 100000  | 0.0006242106977212753| big   | 0.005| 256  |
+| 26 | -197.94267399999998| 2048 | 100000 | 0.0015745433411354479| big   | 0.005| 1    |
+| 27 | -203.756475 | 128   | 10000   | 0.0011009096605457643| big   | 0.005| 256  |
+| 28 | -203.39220720000003| 256 | 100000 | 0.00016400248184833053| big   | 0.005| 32   |
+| 29 | -206.19483359999998| 128 | 100000 | 0.0002215994520193135| med   | 0.005| 512  |
+| 30 | -1250.2948084000002| 2048 | 100000 | 5.195532323836432e-05| big   | 0.05 | 256  |
+| 31 | -209.8291814| 2048  | 10000   | 0.0005267858408097092| big   | 0.005| 512  |
+| 32 | -200.1009688| 16    | 100000  | 0.0021930599073765795| big   | 0.005| 128  |
+| 33 | -197.4871368| 2048  | 100000  | 0.0005815018949165667| big   | 0.08 | 512  |
+| 34 | -199.7138726| 2048  | 100000  | 0.0012819973055063069| small | 0.01 | 256  |
+| 35 | -226.9418044| 64    | 100000  | 0.00014242417712458046| big   | 0.001| 512  |
+| 36 | -210.248239 | 2048  | 100000  | 0.002093143094213713| small | 0.08 | 512  |
+| 37 | -197.94846959999998| 2048 | 100000 | 0.00015829079855318447| big   | 0.08 | 8    |
+| 38 | -203.0086918| 32    | 100000  | 0.005573646370852084| big   | 0.08 | 16   |
+| 39 | -210.3160006| 64    | 100000  | 0.002492473488289927| small | 0.005| 512  |
+| 40 | -205.0444724| 256   | 100000  | 0.000277650961777873| big   | 0.05 | 16   |
+| 41 | -194.78790120000002| 2048 | 100000 | 0.0076741155152266665| big   | 0.005| 256  |
+| 42 | -196.49839060000002| 2048 | 100000 | 0.00257696286804088 | big   | 0.08 | 16   |
+| 43 | -197.320829 | 2048  | 100000  | 0.0009894288746497028| big   | 0.005| 64   |
+| 44 | -203.4548868| 64    | 1000000 | 0.003139522115662888| big   | 0.08 | 16   |
+| 45 | -199.02825360000003| 2048 | 100000 | 0.002159510587670641| big   | 0.02 | 16   |
+| 46 | -195.7877546| 2048  | 100000  | 0.016119874897091855| big   | 0.08 | 256  |
+| 47 | -211.91145820000003| 16 | 100000 | 0.00918091936511538 | big   | 0.08 | 256  |
+| 48 | -202.56893359999998| 512 | 100000 | 0.018460175000489645| med   | 0.08 | 16   |
+| 49 |             | 1024  | 100000  | 0.3758005869181941 | big   | 0.08 | 256  |
+
+# Task 2
+
+I experimented with changing both the update frequency and the learning rate.
+For plotting this part i wrote a custom script, since i couldnt find my way with the plot_train.py script. Somehow i was not able to find detailed documentation and therefore failed to set the timestamp range.
+
+I let the n_timestamps on all three experiments at 25000, even though td3 and sac with good parameters learned way faster. I did that to also catch the slower learning settings.
+This shows, that in sac the good configurations learn super fast, but the worse configurations are about as slow as they are in td3.
+While in td3 the difference between good and bad configurations is lower, but overall slower.
+
+Since higher learning rates looked generally better i added another evaluation with higher learning rates.
+Due to too many lines i split them to new graphs.
+
+## LR from 0.01 to 0.0001
+
+### DDPG
+
+![DDPG](./plots/DDPG.png)
+
+### TD3
+
+![TD3](./plots/TD3.png)
+
+### SAC
+
+![SAC](./plots/SAC.png)
+
+## LR from 1 to 0.1
+
+### DDPG
+
+![DDPG](./plots/DDPG.png)
+
+### TD3
+
+![TD3](./plots/TD3.png)
+
+### SAC
+
+![SAC](./plots/SAC.png)

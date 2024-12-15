@@ -19,11 +19,11 @@ def plot_monitor_files(directory, window_size=10):
         df["r_avg"] = df["r"].rolling(window=window_size).mean()
 
         # Plot the running average with the line number as the x-axis
-        plt.plot(df.index, df["r_avg"], label=os.path.basename(os.path.dirname(file_path)))
+        plt.plot(df.index * 200, df["r_avg"], label=os.path.basename(os.path.dirname(file_path)))
 
-    plt.xlabel("Line Number")
+    plt.xlabel("Timesteps")
     plt.ylabel("Reward")
-    plt.title("Reward over Line Number with Running Average")
+    plt.title("Reward with Running Average")
     plt.legend()
     plt.show()
 
